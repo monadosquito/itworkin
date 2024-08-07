@@ -1,0 +1,16 @@
+.energy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+
+  &__percent {
+    color: white;
+    font-size: 0.7rem;
+  }
+
+  &__progress-bar {
+    width: 5rem;
+    height: 2rem;
+  }
+}

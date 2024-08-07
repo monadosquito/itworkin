@@ -1,0 +1,46 @@
+@import "../utils/unselectable.scss";
+
+.fruit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__img {
+    animation: levitating 3s infinite ease-in-out, pulsing 0.5s;
+    @extend .unselectable;
+    height: 17rem;
+    z-index: 10;
+  }
+
+  &__shadow {
+    display: inline-block;
+    background-color: black;
+    border-radius: 100%;
+    box-shadow: 0 0 1rem 1rem black;
+    opacity: 0.5;
+    animation: pulsing 3s infinite;
+    width: 8rem;
+    height: 1rem;
+  }
+}
+
+@keyframes pulsing {
+  50% {
+    transform: scale(130%, 130%);
+  }
+  100% {
+    transform: scale(100%, 100%);
+  }
+}
+
+@keyframes levitating {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}

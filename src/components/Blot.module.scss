@@ -1,0 +1,35 @@
+.blot {
+  pointer-events: none;
+  animation: fading 2s;
+  position: absolute;
+  z-index: 20;
+
+  &__img {
+    transform: translate(-50%, -50%);
+    position: absolute;
+  }
+
+  &__coins-gain {
+    font-family: "japanese";
+    color: white;
+    animation: surfacing 1s;
+    font-size: 2rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fading {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes surfacing {
+  to {
+    transform: translateY(-100%);
+  }
+}

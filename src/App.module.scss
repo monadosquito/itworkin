@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "japanese";
+  src: url("/japanese3017.ttf");
+}
+
+.root {
+  &__clicker {
+    width: 100vw;
+    height: 100vh;
+  }
+}

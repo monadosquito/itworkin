@@ -1,0 +1,24 @@
+.clicker {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  background: url("/big-blot.png") no-repeat center,
+    radial-gradient(#cb10ac, #22001b);
+  padding: 3rem 2rem 0;
+
+  &__coins {
+    width: 100%;
+    height: 5rem;
+  }
+
+  &__energy {
+    transform: translateY(-45%);
+    width: 7rem;
+  }
+}
+
+.fruit {
+  width: 15rem;
+  height: 15rem;
+  background-color: blueviolet;
+}
