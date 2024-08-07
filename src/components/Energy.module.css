@@ -1,0 +1,12 @@
+.bar {
+  display: flex;
+}
+
+.bar__fill {
+  display: inline-block;
+  background-color: darkorange;
+  border-radius: 25px;
+  transition: width 0.5s;
+  width: 15rem;
+  height: 3rem;
+}

@@ -1,18 +1,22 @@
-
-import { api } from "./api"
+import { api } from "./api";
 
 type EnergyAndCoins = {
-    energy: number
-    coins: number
-}
+  energy: number;
+  coins: number;
+};
 
 const MainApiService = {
-    async getEnergyAndCoinsById(id: number) {
-        const res = await api.get<EnergyAndCoins>(
-            `http://127.0.0.1:8002/test/user_entry_check/${id}`
-        )
-        return res.data
-    }
-}
+  async getEnergyAndCoinsById(id: number) {
+    const res = await api.get<EnergyAndCoins>(`/test/user_entry_check/${id}`);
+    return res.data;
+  },
+  async saveEnergyAndCoinsById(id: number, { energy, coins }: EnergyAndCoins) {
+    const res = await api.post<EnergyAndCoins>(
+      `/test/user_exit/${id}/?energy=${energy}&coins=${coins}`
+    );
+    return res.data;
+  },
+};
 
-export default MainApiService
+export type { EnergyAndCoins };
+export default MainApiService;
